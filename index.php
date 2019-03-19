@@ -150,7 +150,7 @@
 				<div class="container_12">
 					<div class="grid_5">
 						<h3>Booking Form</h3>
-						<form id="bookingForm" method="post" action="indexi.php">
+						<form id="bookingForm" method="post" action="indexi.php" name="bookingform">
 							<div class="fl1">
 								<div class="tmInput">
 									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
@@ -211,8 +211,8 @@
 							<div class="tmTextarea">
 								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
 							</div>
-							<a href="#" class="btn" data-type="submit">Submit</a>
-						</form>
+							<!-- <a href="indexi.php" class="btn" type="submit">Submit</a> -->
+							<a href="#" class="btn" onclick="document.forms['bookingform'].submit(); return false;">Submit</a>
 					</div>
 					<div class="grid_6 prefix_1">
 						<a href="index2.html" class="type"><img src="images/spark.jpg" alt=""><span class="type_caption">14 seaters</span></a>
